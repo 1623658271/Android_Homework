@@ -8,3 +8,6 @@ dependencyResolutionManagement {
 }
 rootProject.name = "Android_Homework"
 include ':app'
+include ':app:thefirsthomework'
+include ':app:thesecondhomework'
+include ':app:thethridhomework'
