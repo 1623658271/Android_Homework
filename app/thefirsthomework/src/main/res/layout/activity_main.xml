@@ -4,13 +4,79 @@
     xmlns:tools="http://schemas.android.com/tools">
 
     <data>
-
+        <variable
+            name="loginMessage"
+            type="com.example.thefirsthomework.viewmodel.MyViewModel" />
     </data>
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         tools:context=".activity.MainActivity">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="别看了就这一个界面"
+            android:textSize="30sp"
+            app:layout_constraintBottom_toTopOf="@+id/tv_title"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.43" />
+
+        <TextView
+            android:id="@+id/tv_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="WanAndroid登录"
+            android:textSize="40sp"
+            app:layout_constraintBottom_toTopOf="@+id/et_username"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.486"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.611" />
+
+        <EditText
+            android:id="@+id/et_username"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:hint="账号"
+            android:text="@={loginMessage.user.username}"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.495"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.346" />
+
+        <EditText
+            android:id="@+id/et_password"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:hint="密码"
+            android:text="@={loginMessage.user.password}"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.477"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/et_username"
+            app:layout_constraintVertical_bias="0.121" />
+
+        <Button
+            android:id="@+id/btn_login"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="clickEvent"
+            android:text="登录"
+            android:textSize="30sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.498"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/et_password"
+            app:layout_constraintVertical_bias="0.264" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>
