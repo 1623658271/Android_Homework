@@ -15,7 +15,7 @@ import com.example.thefirsthomework.view.IViewChange
  * email : 1623658271@qq.com
  * date : 2022/3/12 22:58
  */
-class MyViewModel(@field:SuppressLint("StaticFieldLeak") private var context: Context):ViewModel(),IViewChange,LifecycleObserver {
+class MyViewModel(@field:SuppressLint("StaticFieldLeak") var context: Context):ViewModel(),IViewChange,LifecycleObserver {
     private var user:MutableLiveData<User> = MutableLiveData()
 
     fun getUser():MutableLiveData<User>{

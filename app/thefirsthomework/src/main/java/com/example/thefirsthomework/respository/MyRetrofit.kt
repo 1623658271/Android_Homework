@@ -14,11 +14,11 @@ import retrofit2.converter.gson.GsonConverterFactory
  */
 class MyRetrofit {
     fun loginPost(username: String, password: String): Call<LoginResponse> {
-        var retrofit = Retrofit.Builder()
+        val retrofit = Retrofit.Builder()
             .baseUrl("https://www.wanandroid.com")
             .addConverterFactory(GsonConverterFactory.create())//添加转换器
             .build()
-        var wanAndroid = retrofit.create(WanAndroid::class.java)
+        val wanAndroid = retrofit.create(WanAndroid::class.java)
         return wanAndroid.login(username, password)
     }
 }
