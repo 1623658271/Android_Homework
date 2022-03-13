@@ -21,9 +21,7 @@ class MainActivity : AppCompatActivity() {
         myViewModel.getUser().value = user
         lifecycle.addObserver(myViewModel)
     }
-
     fun clickEvent(view: android.view.View) {
         myViewModel.login(this)
     }
-
 }
